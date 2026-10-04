@@ -49,11 +49,11 @@ the previous string is discarded from memory
 achieves the same effect as genexp, because filter() also
 lazily loads the values. Does not actually store the whole list in memory
 """
-str_list_c = filter(lambda s: len(s) > 3, s)
+str_list_c = filter(lambda s: len(s) > 3, strs)
 
 # this will store the list in memory because the filter() object is being used by list()
 # so this is less "memory friendly"
-# str_list_c = list(filter(lambda s: len(s) > 3, s)) 
+# str_list_c = list(filter(lambda s: len(s) > 3, strs)) 
 
 for s in str_list_c:
     print(s)
